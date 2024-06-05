@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <title>Contact</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+</head>
+<body>
+    <header>
+        <img src="Photos/camera logo.svg" class="cameralogo" alt="logo obturateur de caméra vert" width="75" height="75">
+        <div class="dropdown">
+            <button class="dropmenuimg"><img src="Photos/Hamburger menu.png" class="menuimg" width="75" height="75"></button>
+            <div id="mydropdown"class="dropdownmenu">
+                <a href="Homepage.html"><h2>Accueil</h2></a> 
+                <a href="Tarifs.html"><h2>Tarifs</h2></a>
+                <a href="Apropos.html"><h2>À propos</h2></a>
+                <a href="Galerie.html"><h2>Galerie</h2></a>
+                <a href="Contact.html"><h2>Contact</h2></a>
+            </div>
+        </div>
+        <a href="Homepage.html"><img src="Photos/Logo artiste.png" class="artistelogo" alt="Logo nom de l'artiste sur une feuille d'églantier stylisée, lien vers l'accueil" width="250" height="auto"></a>
+        <nav>
+            <a href="Homepage.html"><h2>Accueil</h2></a> 
+            <a href="Tarifs.html"><h2>Tarifs</h2></a>
+            <a href="Apropos.html"><h2>À propos</h2></a>
+            <a href="Galerie.html"><h2>Galerie</h2></a>
+            <a href="Contact.html"><h2>Contact</h2></a>
+        </nav>
+    </header> 
+    <main>
+        <h1>Parlons de votre projet</h1>
+<div class="contactform">
+    <form method="get" action="traitement.php">
+        <div class="formgrouprow">
+            <div class="formgroup">
+                <label for="nom">Nom</label>
+                <br>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="formgroup">
+                <label for="email">Email</label>
+                <br>
+                <input type="email" id="email" name="email" required>
+            </div>
+        </div>
+            <div class="formgroup">
+                <label for="message">Message</label>
+                <br>
+                <textarea name="message" id="message" rows="5" required></textarea>
+            </div>
+        <center><input type="submit" class="buttonform" value="Envoyer"></center>
+    </form>
+</div>
+    </main>
+    <footer>
+        <div class="social">
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/home?lang=en"><img src="Photos/Twitter logo.svg" alt="Logo Twitter/X vert amenant sur le site" width="90" height="80"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/"><img src="Photos/Instagram logo.svg" alt="Logo Instagram vert amenant sur le site" width="90" height="80"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/"><img src="Photos/Facebook logo.svg" alt="Logo Facebook vert amenant sur le site" width="90" height="80"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/"><img src="Photos/Youtube logo.svg" alt="Logo Youtube vert amenant sur le site" width="90" height="80"></a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropMenuButton = document.querySelector('.dropmenuimg');
+            const dropdownMenu = document.querySelector('.dropdownmenu');
+            
+            dropMenuButton.addEventListener('click', function() {
+                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+            });
+            document.addEventListener('click', function(event) {
+                if (!dropMenuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.style.display = 'none';
+                }
+            });
+        });
+        </script>
+</body>
+</html>

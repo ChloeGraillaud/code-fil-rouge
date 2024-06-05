@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <title>Galerie</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+</head>
+<body>
+    <header>
+        <img src="Photos/camera logo.svg" class="cameralogo" alt="logo obturateur de caméra vert" width="75" height="75">
+        <div class="dropdown">
+            <button class="dropmenuimg"><img src="Photos/Hamburger menu.png" class="menuimg" width="75" height="75"></button>
+            <div id="mydropdown"class="dropdownmenu">
+                <a href="Homepage.html"><h2>Accueil</h2></a> 
+                <a href="Tarifs.html"><h2>Tarifs</h2></a>
+                <a href="Apropos.html"><h2>À propos</h2></a>
+                <a href="Galerie.html"><h2>Galerie</h2></a>
+                <a href="Contact.html"><h2>Contact</h2></a>
+            </div>
+        </div>
+        <a href="Homepage.html"><img src="Photos/Logo artiste.png" class="artistelogo" alt="Logo nom de l'artiste sur une feuille d'églantier stylisée, lien vers l'accueil" width="250" height="auto"></a>
+            <nav>
+                <a href="Homepage.html"><h2>Accueil</h2></a> 
+                <a href="Tarifs.html"><h2>Tarifs</h2></a>
+                <a href="Apropos.html"><h2>À propos</h2></a>
+                <a href="Galerie.html"><h2>Galerie</h2></a>
+                <a href="Contact.html"><h2>Contact</h2></a>
+            </nav>
+    </header>
+    <main>
+        <h1>Galerie</h1>
+        <h2>Portraits</h2>
+        <div class="galeriecontainer">
+            <div class="galerie1">
+                <img src="Photos/roman-akhmerov-Js6Hwobewi8-unsplash.jpg" class="imghover galerieimg1" alt="Photo portrait en plan Américain d'une femme en robe rouge, devant un lac et végétation naturelle"  width="274" height="410">
+                <img src="Photos/lukas-godina-m7sdxLZwjjw-unsplash-min.jpg" class="imghover galerieimg1" alt="Photo portrait en noir et blanc d'un homme en costume, de dos et regardant sur le coté"  width="274" height="410">
+                <img src="Photos/nathan-dumlao-4_mJ1TbMK8A-unsplash-min.jpg" class="imghover galerieimg1" alt="Photo couleur d'une famille avec trois enfants, souriants dans un champ de fleurs oranges" width="400" height="413">
+                <img src="Photos/charlesdeluvio-DziZIYOGAHc-unsplash.jpg" class="imghover galerieimg1" alt="Photo couleur d'un carlin noir avec un manteau rayé bleu jeans, blanc et rouge, sur fond rouge uni"  width="274" height="410">
+                <img src="Photos/yulia-matvienko-WPuVX6hWheo-unsplash-min.jpg" class="imghover galerieimg1" alt="Photo portrait en noir et blanc d'un chat, regardant sur la droite, sur un fond dégradé noir vers gris"  width="274" height="410">
+                <img src="Photos/jametlene-reskp-fliwkBbS7oM-unsplash-min.jpg" class="imghover galerieimg1" alt="Photo couleur d'un groupe de chiots berger Australien sur une marche, avec en fond un mur gris et une porte noire" width="400" height="413">
+            </div>
+        </div>
+        <h2>Paysages</h2>
+        <div class="galeriecontainer">
+            <div class="galerie2">
+                <img src="Photos/leonard-cotte-c1Jp-fo53U8-unsplash.jpg" class="imghover galerieimg2" alt="Photo couleur d'un champ de lavande violette, avec un coucher de soleil derrière quelques arbres " width="432" height="262">
+                <img src="Photos/jonathan-roger-LY1eyQMFeyo-unsplash.jpg" class="imghover galerieimg2" alt="Photo couleur de l'horizon de la ville américaine Jersey City, avec l'océan en premier plan" width="432" height="262">
+                <img src="Photos/oc-gonzalez-xg8z_KhSorQ-unsplash.jpg" class="imghover galerieimg2" alt="Photo couleur d'un coucher de soleil créant un dégradé sur le ciel de bleu à orange, avec des bruyières en premier plan" width="432" height="262">
+                <img src="Photos/sebastian-unrau-v4e3JI7DDHI-unsplash.jpg" class="imghover galerieimg2" alt="Photo couleur d'une route bordée de végétation verte, dans une forêt d'arbre aux feuilles oranges" width="432" height="262">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/home?lang=en"><img src="Photos/Twitter logo.svg" alt="Logo Twitter/X vert amenant sur le site" width="90" height="80"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/"><img src="Photos/Instagram logo.svg" alt="Logo Instagram vert amenant sur le site" width="90" height="80"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/"><img src="Photos/Facebook logo.svg" alt="Logo Facebook vert amenant sur le site" width="90" height="80"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/"><img src="Photos/Youtube logo.svg" alt="Logo Youtube vert amenant sur le site" width="90" height="80"></a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropMenuButton = document.querySelector('.dropmenuimg');
+            const dropdownMenu = document.querySelector('.dropdownmenu');
+            
+            dropMenuButton.addEventListener('click', function() {
+                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+            });
+            document.addEventListener('click', function(event) {
+                if (!dropMenuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.style.display = 'none';
+                }
+            });
+        });
+        </script>
+</body>
+</html>

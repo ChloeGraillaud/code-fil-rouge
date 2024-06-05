@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <title>Home page</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+</head>
+<body>
+    <header>
+        <img src="Photos/camera logo.svg" class="cameralogo" alt="logo obturateur de caméra vert" width="75" height="75">
+        <div class="dropdown">
+            <button class="dropmenuimg"><img src="Photos/Hamburger menu.png" class="menuimg" width="75" height="75"></button>
+            <div id="mydropdown"class="dropdownmenu">
+                <a href="Homepage.html"><h2>Accueil</h2></a> 
+                <a href="Tarifs.html"><h2>Tarifs</h2></a>
+                <a href="Apropos.html"><h2>À propos</h2></a>
+                <a href="Galerie.html"><h2>Galerie</h2></a>
+                <a href="Contact.html"><h2>Contact</h2></a>
+            </div>
+        </div>
+        <a href="Homepage.html"><img src="Photos/Logo artiste.png" class="artistelogo" alt="Logo nom de l'artiste sur une feuille d'églantier stylisée, lien vers l'accueil" width="250" height="auto"></a>
+        <nav>
+                <a href="Homepage.html"><h2>Accueil</h2></a> 
+                <a href="Tarifs.html"><h2>Tarifs</h2></a>
+                <a href="Apropos.html"><h2>À propos</h2></a>
+                <a href="Galerie.html"><h2>Galerie</h2></a>
+                <a href="Contact.html"><h2>Contact</h2></a>
+            </nav>
+    </header>
+    <main>
+        <div class="hometext">
+        <h1 class="hometitre">Leonora Kahn<br>Photographie</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nam accumsan leo magna, sollicitudin accumsan mi 
+        eleifend eu. Suspendisse porta porta rhoncus. Nam 
+        eu magna sed odio viverra pellentesque. Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit.
+        <br>
+        Integer porta efficitur felis, ullamcorper finibus. 
+        </p>
+        <a href="Contact.html"><h3>Un projet ? Écrivez-moi</h3></a>
+    </div>
+        <div class="homephotos">
+            <img src="Photos/david-clode-I_eOutw1MTg-unsplash.jpg" class="imgboa imghover" alt="Gros plan d'un boa constrictor brun et noir" width="235" height="351">
+            <img src="Photos/filipp-romanovski-CGKYNN3uuVo-unsplash.jpg" class="imgyellowlady imghover" alt="Portrait d'une femme aux cheveux bruns courts sur fond jaune ocre" width="235" height="351">
+            <br>
+            <img src="Photos/sean-oulashin-KMn4VEeEPR8-unsplash.jpg" class="imgbeach imghover" alt="Photo d'une plage au coucher de soleil, avec une eau turquoise" width="357" height="238">
+            <img src="Photos/dawid-zawila--G3rw6Y02D0-unsplash.jpg" class="imgsunsetfield imghover" alt="Photo de plaines d'herbe verte, prise à l'heure d'or avec de la brume en arrière-plan" width="357" height="238">
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/home?lang=en"><img src="Photos/Twitter logo.svg" alt="Logo Twitter/X vert amenant sur le site" width="90" height="80"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/"><img src="Photos/Instagram logo.svg" alt="Logo Instagram vert amenant sur le site" width="90" height="80"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/"><img src="Photos/Facebook logo.svg" alt="Logo Facebook vert amenant sur le site" width="90" height="80"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/"><img src="Photos/Youtube logo.svg" alt="Logo Youtube vert amenant sur le site" width="90" height="80"></a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropMenuButton = document.querySelector('.dropmenuimg');
+            const dropdownMenu = document.querySelector('.dropdownmenu');
+            
+            dropMenuButton.addEventListener('click', function() {
+                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+            });
+            document.addEventListener('click', function(event) {
+                if (!dropMenuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.style.display = 'none';
+                }
+            });
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <title>À propos</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+</head>
+<body>
+    <header>
+        <img src="Photos/camera logo.svg" class="cameralogo" alt="logo obturateur de caméra vert" width="75" height="75">
+        <div class="dropdown">
+            <button class="dropmenuimg"><img src="Photos/Hamburger menu.png" class="menuimg" width="75" height="75"></button>
+            <div id="mydropdown"class="dropdownmenu">
+                <a href="Homepage.html"><h2>Accueil</h2></a> 
+                <a href="Tarifs.html"><h2>Tarifs</h2></a>
+                <a href="Apropos.html"><h2>À propos</h2></a>
+                <a href="Galerie.html"><h2>Galerie</h2></a>
+                <a href="Contact.html"><h2>Contact</h2></a>
+            </div>
+        </div>
+        <a href="Homepage.html"><img src="Photos/Logo artiste.png" class="artistelogo" alt="Logo nom de l'artiste sur une feuille d'églantier stylisée, lien vers l'accueil" width="250" height="auto"></a>
+        <nav>
+            <a href="Homepage.html"><h2>Accueil</h2></a> 
+            <a href="Tarifs.html"><h2>Tarifs</h2></a>
+            <a href="Apropos.html"><h2>À propos</h2></a>
+            <a href="Galerie.html"><h2>Galerie</h2></a>
+            <a href="Contact.html"><h2>Contact</h2></a>
+        </nav>
+    </header>
+    <main>
+        <h1>À propos</h1> 
+            <div class="aproposcontainer">
+                <img src="Photos/matheus-ferrero-pg_WCHWSdT8-unsplash.jpg" class="imghover" alt="Photo portrait en couleur de l'artiste Leonora Kahn, face à la caméra portant un chapeau, sur un fond de feuille naturelles" width="287" height="431">
+                <div class="apropostext">
+                    <p>Texte succinct sur l’artiste et ses valeurs
+                    Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit. Vivamus vel mi convallis risus egestas
+                    molestie ac sed libero. Sed non odio diam. 
+                    Sed tempus ligula turpis, et fermentum 
+                    massa eleifend sed. </p>
+                    <p>Je vous attends dans mon atelier situé à Paris
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Vivamus vel mi convallis risus egestas molestie ac sed libero. 
+                    Sed non odio diam. Sed tempus ligula turpise.</p>
+                </div>
+                <img src="Photos/harry-cunningham-UWblg2i6Blw-unsplash.jpg" class="imghover" alt="Photo de l'atelier de la photographe, montrant la lightroom et bureau de travail" width="331" height="496">
+            </div>
+        <h2 class="devise">Devise de l'artiste</h2>
+    </main>
+    <footer>
+        <div class="social">
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/home?lang=en"><img src="Photos/Twitter logo.svg" alt="Logo Twitter/X vert amenant sur le site" width="90" height="80"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/"><img src="Photos/Instagram logo.svg" alt="Logo Instagram vert amenant sur le site" width="90" height="80"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/"><img src="Photos/Facebook logo.svg" alt="Logo Facebook vert amenant sur le site" width="90" height="80"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/"><img src="Photos/Youtube logo.svg" alt="Logo Youtube vert amenant sur le site" width="90" height="80"></a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropMenuButton = document.querySelector('.dropmenuimg');
+            const dropdownMenu = document.querySelector('.dropdownmenu');
+            
+            dropMenuButton.addEventListener('click', function() {
+                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+            });
+            document.addEventListener('click', function(event) {
+                if (!dropMenuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.style.display = 'none';
+                }
+            });
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+header {
+    background-color: white;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: none;
+    padding: 15px;
+}
+.dropdown {
+    display:none
+}
+body {
+    background-color: white ;
+    margin:5;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer {
+    background-color: white;
+}
+main {
+    background-color: #1C361D;
+    border-radius: 25px;
+    margin:0 auto;
+    min-height: auto;
+    padding : 60px 15px 75px;
+    box-sizing: border-box;
+    width:100%;
+}
+a {
+    text-decoration: none;
+}
+p {
+    font-family: 'Francois One', sans-serif;
+    font-size: 24px;
+    color:white;
+    padding:15px;
+}
+img {
+    border: 15px solid white;
+    border-radius: 25px;   
+}
+.imghover:hover {
+    transform: scale(1.5);
+    box-shadow: none;
+    z-index: 1;
+}
+h1 {
+    font-family: 'Francois One', sans-serif;
+    color: #5BA55D;
+    font-size: 65px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+h2 {
+    padding:20px;
+    font-family: 'Francois One', sans-serif;
+    color: white;
+    text-align: center;
+}
+h3 {
+    font-family: 'Francois One', sans-serif;
+    font-size: 24px;
+    color: white ;
+    margin-top: 75px;
+    background-color: #5BA55D;
+    display: inline-block;
+    padding: 17px 30px;
+    border-radius: 25px;  
+}
+ul {
+    font-family: 'Francois One', sans-serif;
+    color: white;
+    font-size: 24px;
+    list-style-position: inside;
+}
+label {
+    font-family: 'Francois One', sans-serif;
+    color: white
+}
+nav, .social {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+nav a {
+    text-decoration: none;
+    margin-left: 20px;
+}
+nav h2 {
+    margin: 0;
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 32px;
+    color: #011202;
+    margin-inline: 10px;
+}
+.cameralogo, .artistelogo {
+    margin-left: 15px;
+}
+.hometitre {
+    padding: 15px;
+    margin-bottom: 25px;
+}
+.hometext {
+    float:left;
+    text-align: center;
+    width:50%
+}
+.homephotos {
+    float:right;
+    width:50%; 
+    text-align: center;  
+}
+.aproposcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px 0;
+}
+.apropostext {
+    align-items: center;
+    text-align: center;
+}
+.devise {
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 40px;
+    color: #5BA55D; 
+}
+.tarifleft {
+    float:left;
+    text-align: center;
+    width:50%
+}
+.tarifright {
+    float:right;
+    width:50%;
+    text-align: center;
+}
+.galeriecontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+.galerie1 {
+    width:60%;  
+}
+.galerie2 {
+    width:50%;  
+}
+.contactform {
+    scale: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+.formgroup {
+    margin-bottom: 15px;
+}
+.formgroup label {
+    display: block;
+    margin-bottom: 5px;
+}
+.formgroup input,
+.formgroup textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.formgrouprow {
+    display: flex;
+    justify-content: space-between;
+}
+.formgroup:first-child {
+    margin-right: 200px;
+}
+input[type=submit] {
+    font-family: 'Francois One', sans-serif;
+    padding: 13px 30px;
+    background-color: #5BA55D;
+    border:none;
+    border-radius: 25px;
+    color: #ffffff;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:932px )
+     { 
+        nav {
+            display:none
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding : 30px 0 75px;
+        }
+        .hometext {
+            width:80%;
+            padding-bottom: 40px;
+        }
+        h1 {
+            font-size: 60px;
+        }
+        .homephotos {
+            width:90%; 
+        }
+        .social {
+            justify-content: center;
+            margin: 0 0 0;
+            scale: 90%;
+        }
+        .cameralogo {
+            display:none
+        }
+        .artistelogo {
+            margin:0
+        }
+        .dropdown {
+            display: flex;
+            border:none;
+            position: relative;
+        }
+        .menuimg, .dropdownmenuimg {
+            border:none;
+            border-radius: 0;
+            background-color: white;
+            box-shadow: none;
+        }
+        button.dropmenuimg {
+            border: none;
+            background: none;
+            padding: 0;
+        }
+        .dropdownmenu {
+            display: none;
+            position: absolute;
+            background-color: #5BA55D;
+            padding:25px;
+            border-radius: 10px;
+        }
+        .dropdownmenu h2 {
+            color: #011202;
+            font-family: 'Kaushan Script', sans-serif;
+            padding:10px
+        }
+        .dropdownmenu a {
+            display: block;
+            background-color: white;
+            border-radius: 5px;
+            scale:120%
+        }
+        .tarifleft {
+            width:90%;
+            padding-bottom: 30px;
+        }
+        .tarifright {
+            width: 90%;
+        }
+        .aproposcontainer {
+            flex-direction: column;
+        }
+        .galeriecontainer {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .galerie1 {
+            margin-left: -40px;
+            margin-bottom: 30px;
+        }
+        .galerieimg1 {
+            max-width: 110%;
+        }
+        .galerie2 {
+            width: 100%;
+            scale: 88%;
+            margin-top: -40px;
+            margin-bottom: -40px;
+        }
+        .formgrouprow {
+            flex-direction: column;
+        }
+        .contactform {
+            scale:100%;
+            margin:0;
+            width: 100%;
+        }
+        label {
+            font-size: 24px;
+        }
+        .buttonform {
+            scale:120%
+        }
+    }
