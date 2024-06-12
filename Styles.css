@@ -17,7 +17,7 @@ header {
 }
 body {
     background-color: white ;
-    margin:5;
+    margin:5px;
     display:flex;
     flex-direction: column;
     min-height: 100vh;
@@ -45,7 +45,7 @@ p {
 }
 img {
     border: 15px solid white;
-    border-radius: 25px;   
+    border-radius: 25px;
 }
 .imghover:hover {
     transform: scale(1.5);
@@ -58,12 +58,15 @@ h1 {
     font-size: 65px;
     text-align: center;
     padding-bottom: 40px;
+    text-shadow: 2px 2px #011202;
 }
 h2 {
     padding:20px;
     font-family: 'Francois One', sans-serif;
+    font-weight: bold;
     color: white;
     text-align: center;
+    text-shadow: 2px 2px #011202;
 }
 h3 {
     font-family: 'Francois One', sans-serif;
@@ -74,6 +77,7 @@ h3 {
     display: inline-block;
     padding: 17px 30px;
     border-radius: 25px;  
+    box-shadow: 2px 2px #011202;
 }
 ul {
     font-family: 'Francois One', sans-serif;
@@ -102,6 +106,7 @@ nav h2 {
     font-size: 32px;
     color: #011202;
     margin-inline: 10px;
+    text-shadow: none;
 }
 .cameralogo, .artistelogo {
     margin-left: 15px;
@@ -131,10 +136,36 @@ nav h2 {
     align-items: center;
     text-align: center;
 }
+.carousel-inner {
+    height: 800px;
+    width: 560px;
+}
+
+.carousel-inner img {
+    height: 800px;
+    width: 560px;
+    object-fit: cover;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5%;
+}
+
+.carousel-control-prev {
+    left: -5%;
+}
+
+.carousel-control-next {
+    right: -5%;
+}
 .devise {
     font-family: 'Kaushan Script', sans-serif;
     font-size: 40px;
     color: #5BA55D; 
+    text-shadow: 2px 2px #011202;
 }
 .tarifleft {
     float:left;
@@ -146,6 +177,10 @@ nav h2 {
     width:50%;
     text-align: center;
 }
+.tariftext {
+    font-size: 20px;
+}
+
 .galeriecontainer {
     display: flex;
     flex-direction: row;
@@ -180,6 +215,7 @@ nav h2 {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    box-shadow: 2px 2px #011202;
 }
 .formgrouprow {
     display: flex;
@@ -197,8 +233,8 @@ input[type=submit] {
     color: #ffffff;
     font-size: 17px;
     cursor: pointer;
+    box-shadow: 2px 2px #011202;
 }
-
 @media only screen and (max-width:932px )
      { 
         nav {
@@ -234,37 +270,44 @@ input[type=submit] {
         }
         .dropdown {
             display: flex;
-            border:none;
+            border: none;
             position: relative;
         }
+        
         .menuimg, .dropdownmenuimg {
-            border:none;
+            border: none;
             border-radius: 0;
             background-color: white;
             box-shadow: none;
+            cursor: pointer;
         }
+        
         button.dropmenuimg {
             border: none;
             background: none;
             padding: 0;
         }
+        
         .dropdownmenu {
             display: none;
-            position: absolute;
+            position: fixed;
             background-color: #5BA55D;
-            padding:25px;
+            padding: 25px;
             border-radius: 10px;
+            left: 0;
+            
         }
         .dropdownmenu h2 {
             color: #011202;
             font-family: 'Kaushan Script', sans-serif;
-            padding:10px
+            padding: 10px;
         }
+        
         .dropdownmenu a {
             display: block;
             background-color: white;
             border-radius: 5px;
-            scale:120%
+            transform: scale(1.2);
         }
         .tarifleft {
             width:90%;
@@ -290,7 +333,7 @@ input[type=submit] {
         }
         .galerie2 {
             width: 100%;
-            scale: 88%;
+            transform: scale(0.88);
             margin-top: -40px;
             margin-bottom: -40px;
         }
@@ -306,6 +349,6 @@ input[type=submit] {
             font-size: 24px;
         }
         .buttonform {
-            scale:120%
+            transform: scale(1.2);
         }
     }
