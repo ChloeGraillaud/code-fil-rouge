@@ -3,7 +3,8 @@
     padding: 0;
   }
 header {
-    background-color: white;
+    background-color: rgb(240, 247, 242);
+    background-color: var(--header-background-color);
     width:100%;
     display:flex;
     justify-content: center;
@@ -16,14 +17,17 @@ header {
     display:none
 }
 body {
-    background-color: white ;
+    background-color: rgb(240, 247, 242);
+    background-color: var(--body-background-color);
     margin:5px;
     display:flex;
     flex-direction: column;
     min-height: 100vh;
 }
 footer {
-    background-color: white;
+    background-color: rgb(240, 247, 242);
+    background-color: var(--footer-background-color);
+    padding: 10px;
 }
 main {
     background-color: #1C361D;
@@ -40,12 +44,13 @@ a {
 p {
     font-family: 'Francois One', sans-serif;
     font-size: 24px;
-    color:white;
+    color:rgba(215, 220, 215, 1);
     padding:15px;
 }
 img {
     border: 15px solid white;
     border-radius: 25px;
+    filter: brightness(var(--image-dark-brightness));
 }
 .imghover:hover {
     transform: scale(1.5);
@@ -64,14 +69,14 @@ h2 {
     padding:20px;
     font-family: 'Francois One', sans-serif;
     font-weight: bold;
-    color: white;
+    color: rgba(215, 220, 215, 1);
     text-align: center;
     text-shadow: 2px 2px #011202;
 }
 h3 {
     font-family: 'Francois One', sans-serif;
     font-size: 24px;
-    color: white ;
+    color: rgba(215, 220, 215, 1) ;
     margin-top: 75px;
     background-color: #5BA55D;
     display: inline-block;
@@ -81,20 +86,38 @@ h3 {
 }
 ul {
     font-family: 'Francois One', sans-serif;
-    color: white;
+    color: rgba(215, 220, 215, 1);
     font-size: 24px;
     list-style-position: inside;
 }
 label {
     font-family: 'Francois One', sans-serif;
-    color: white
+    color: rgba(215, 220, 215, 1)
 }
-nav, .social {
+nav {
     display: flex;
     justify-content: flex-end;
     flex-grow: 1;
     margin-right: 25px;
     margin-top: 10px;
+}
+.social {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.darkmode-icon {
+    margin-left: 20px;
+}
+.footer-content img {
+    border:none;
+    padding:15px
 }
 nav a {
     text-decoration: none;
@@ -110,6 +133,7 @@ nav h2 {
 }
 .cameralogo, .artistelogo {
     margin-left: 15px;
+    border:none
 }
 .hometitre {
     padding: 15px;
@@ -164,7 +188,7 @@ nav h2 {
 .devise {
     font-family: 'Kaushan Script', sans-serif;
     font-size: 40px;
-    color: #5BA55D; 
+    color: rgb(91, 165, 93); 
     text-shadow: 2px 2px #011202;
 }
 .tarifleft {
@@ -211,6 +235,8 @@ nav h2 {
 }
 .formgroup input,
 .formgroup textarea {
+    background-color: var(--form-background-color);
+    color: var(--form-text-color);
     width: calc(100% - 20px);
     padding: 10px;
     border: 1px solid #ccc;
@@ -230,10 +256,35 @@ input[type=submit] {
     background-color: #5BA55D;
     border:none;
     border-radius: 25px;
-    color: #ffffff;
+    color: rgba(215, 220, 215, 1);
     font-size: 17px;
     cursor: pointer;
     box-shadow: 2px 2px #011202;
+}
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#dark-mode-toggle img {
+    display: block;
+}
+:root {
+    --form-background-color: rgba(215, 220, 215, 1); 
+    --form-text-color: #000000;
+}
+.dark-mode {
+    --footer-background-color: #434E42;
+    --header-background-color: #434E42;
+    --body-background-color: #434E42;
+    --image-dark-brightness: 0.7;
+    --form-background-color: #0C140C;
+    --form-text-color: rgba(215, 220, 215, 1);
+    --dropdownmenua-background-color: #434E42;
+    --dropdownmenu-background-color:#1C361D;
 }
 @media only screen and (max-width:932px )
      { 
@@ -261,12 +312,13 @@ input[type=submit] {
             justify-content: center;
             margin: 0 0 0;
             scale: 90%;
+            margin:none
         }
         .cameralogo {
             display:none
         }
         .artistelogo {
-            margin:0
+            margin-left: 20px;
         }
         .dropdown {
             display: flex;
@@ -277,7 +329,7 @@ input[type=submit] {
         .menuimg, .dropdownmenuimg {
             border: none;
             border-radius: 0;
-            background-color: white;
+            
             box-shadow: none;
             cursor: pointer;
         }
@@ -292,20 +344,24 @@ input[type=submit] {
             display: none;
             position: fixed;
             background-color: #5BA55D;
+            background-color: var(--dropdownmenu-background-color);
             padding: 25px;
             border-radius: 10px;
             left: 0;
+            z-index: 2;
             
         }
         .dropdownmenu h2 {
             color: #011202;
             font-family: 'Kaushan Script', sans-serif;
             padding: 10px;
+            text-shadow: none;
         }
         
         .dropdownmenu a {
             display: block;
             background-color: white;
+            background-color: var(--dropdownmenua-background-color);
             border-radius: 5px;
             transform: scale(1.2);
         }
@@ -315,6 +371,22 @@ input[type=submit] {
         }
         .tarifright {
             width: 90%;
+        }
+        .carousel-inner {
+            height: 700px;
+            width: 460px;
+        }
+        
+        .carousel-inner img {
+            height: 700px;
+            width: 460px;
+            object-fit: cover;
+        }
+        .carousel-control-prev {
+            left: 5%;
+        }
+        .carousel-control-next {
+            right: 5%;
         }
         .aproposcontainer {
             flex-direction: column;
@@ -350,5 +422,16 @@ input[type=submit] {
         }
         .buttonform {
             transform: scale(1.2);
+        }
+        .darkmode-icon button img {
+            width: 100px; 
+            height: auto;
+            margin-left: -30px;
+            margin-right: -20px;
+        }
+        .social a img {
+            width: 100px;
+            height: auto;
+            
         }
     }
