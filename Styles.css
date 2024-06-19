@@ -160,6 +160,22 @@ nav h2 {
     align-items: center;
     text-align: center;
 }
+.mapcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.google-map {
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.google-map iframe {
+    height: 450px;
+    width: 600px;
+    filter: brightness(var(--image-dark-brightness));
+    border-radius: 25px;
+}
 .carousel-inner {
     height: 800px;
     width: 560px;
@@ -390,6 +406,10 @@ input[type=submit] {
         }
         .aproposcontainer {
             flex-direction: column;
+        }
+        .google-map iframe {
+            height: 250px;
+            width: 375px;
         }
         .galeriecontainer {
             flex-direction: column;
