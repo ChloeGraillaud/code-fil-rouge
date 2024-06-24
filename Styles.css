@@ -73,11 +73,17 @@ h2 {
     text-align: center;
     text-shadow: 2px 2px #011202;
 }
+nav h2:hover {
+    color:#5BA55D;
+}
+.bouton:hover {
+    background-color: #85be87;
+}
 h3 {
     font-family: 'Francois One', sans-serif;
     font-size: 24px;
     color: rgba(215, 220, 215, 1) ;
-    margin-top: 75px;
+    margin-top: 35px;
     background-color: #5BA55D;
     display: inline-block;
     padding: 17px 30px;
@@ -142,12 +148,43 @@ nav h2 {
 .hometext {
     float:left;
     text-align: center;
-    width:50%
+    width:50%;
+    padding-bottom: 70px;
 }
 .homephotos {
     float:right;
     width:50%; 
+    text-align: center;
+    padding-bottom: 70px;
+}
+.testimonial-title h2 {
     text-align: center;  
+    width: 100%;
+    margin: 0 0 30px auto;
+}
+.testimonial-carousel {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.testimonial-item {
+    background: rgb(240, 247, 242);
+    filter: brightness(var(--image-dark-brightness));
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    height: 250px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 10px;
+}
+.testimonial-item p {
+    font-style: italic;
+    color: #555;
+}
+.testimonial-item h4 {
+    margin-top: 10px;
+    color: 011202;
 }
 .aproposcontainer {
     display: flex;
@@ -300,7 +337,7 @@ input[type=submit] {
     --form-background-color: #0C140C;
     --form-text-color: rgba(215, 220, 215, 1);
     --dropdownmenua-background-color: #434E42;
-    --dropdownmenu-background-color:#1C361D;
+    --dropdownmenu-background-color:#1C361D; 
 }
 @media only screen and (max-width:932px )
      { 
