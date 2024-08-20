@@ -186,6 +186,10 @@ nav h2 {
     margin-top: 10px;
     color: 011202;
 }
+.commentaire {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 .aproposcontainer {
     display: flex;
     flex-direction: row;
